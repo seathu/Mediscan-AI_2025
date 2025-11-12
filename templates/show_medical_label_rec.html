@@ -1,0 +1,45 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+	</head>	
+	<body class="body-style">
+        <center> <h1 style="color: rgb(255, 153, 0);" class="let_space">Select an image</h1></center>
+        <br><br><br><br>
+      <center>
+        <form class="grid" action="/select" method="POST">
+            
+            {% if myfile %}
+              <center>
+                <!-- <h1 style="color: rgb(255, 153, 0);" class="let_space">WELCOME TO HEART DECEASE PREDICTION USING ML....</h1> -->
+                <h3 style="color: blue;" class="let_space">selected....</h3>
+                
+                <!-- <h3 style="color: blue;" class="let_space">path: {{name1}}, is here!!</h3>  -->
+              </center> 
+            {% endif %}   
+       
+        <label for="myfile">Select an image:</label>
+        <input type="file" id="myfile" name="myfile">
+        <input type='submit' value='Display'>
+
+
+    </form>
+    </center>
+        <br>
+        <br>
+        <br>
+      
+                <!-- <h3 style="color: blue;" class="let_space">path: {{name1}}, is here!!</h3>  -->
+              </center> 
+        <center>
+          
+        <button id="Enter" type="button" class="file_submit" onclick="window.location.href = '/' ; " class="button">GO TO HOME..</button>
+        </center>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
+
+
+

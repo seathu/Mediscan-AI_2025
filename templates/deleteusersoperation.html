@@ -1,0 +1,40 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+	</head>	
+	<body bgcolor="gray">
+        <form class="grid" action="/dur" method="POST">
+          <h1 style="color: rgb(255, 153, 0);" class="let_space">Deletion of existing user in film.</h1>
+          {% if fname %}
+            <center>
+              <!-- <h1 style="color: rgb(255, 153, 0);" class="let_space">WELCOME TO HEART DECEASE PREDICTION USING ML....</h1> -->
+              <h3 style="color: blue;" class="let_space">User Created....</h3>
+              
+              <!-- <h3 style="color: blue;" class="let_space">path: {{name1}}, is here!!</h3>  -->
+            </center> 
+          {% endif %}    
+          <label for="name">Select candidate first name to delete :</label>
+          <select name="fname" id="fname">
+            {%for i in range(0, fnames|length)%} 
+            <option value="{{fnames[i]}}">{{fnames[i]}}</option>     
+            {% endfor %}        
+          </select>  
+          
+          
+          <center><input class="file_submit" type="Submit"></center>
+        </form>
+        <br>
+        <br>
+        <br>
+        <center>
+        <button id="Enter" type="button" class="file_submit" onclick="window.location.href = '/home' ; " class="button">GO TO HOME..</button>
+        </center>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,91 @@
+<html>
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+	</head>	
+    <body class="body-style">
+        <div class="header">			
+            <!-- {% if fpath %}        
+                <img src="{{ fpath }}"> 
+            {% endif %} -->
+            <img src="/mongo/logo.jpg">
+             <br>
+                <!-- <h1 style="color: rgb(255, 153, 0);" class="let_space">WELCOME To Medical label recognition and recommendation..</h1>			 -->
+                  <a href="/admin" class="glow">Admin Login</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			  
+                  <a href="/create" class="glow">Create User</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <!-- <a href="/simage" class="glow">Select Image for classification</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="/analyze" class="glow">Extract Text</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="/predictions" class="glow">Predictions</a> -->
+            </div>	
+          <center>
+            <br><br><br><br><br><br><br><br>
+    <marquee>
+	<h1 style="color: rgb(255, 153, 0);" class="let_space">Presription upload and cropping.</h1>
+	</marquee>
+   
+     
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mx_auto mt_5 text_center">
+                    <!-- <h1 style="color: blue;" class="let_space">Medical label recognition and recommendations....</h1> -->
+                    <form  method="post" enctype="multipart/form-data">
+                        {{ form.hidden_tag() }}
+
+                        {% for error in form.photo.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                {{ form.photo(class="form-control") }}
+                            </div>
+                            <div class="col-auto">
+                                {{ form.submit(class="btn btn-success") }}
+                            </div>
+                        </div>
+
+                    </form>
+
+                    {% if file_name %}
+                        <div class="mt_5">
+                            <img src="{{ file_name }}" style="width: 400px;">
+                            <h1>{{ file_name }}</h1>
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    <!-- </center> -->
+        <br><br><br><br>
+     
+          <div>
+            <button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/' ; " class="button">GO TO HOME..</button>
+            <br><br>
+            <button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/analyze' ; " class="button">ANALYZE</button>
+        </div>
+       
+        <!-- <button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/simage' ; " class="button">Go To further process</button> -->
+        
+        <br>
+        <br>
+        
+        <div class="footer">	
+            <h3 style="color: rgb(255, 153, 0);" class="let_space">Medical label recognition and recommendation</h3>
+    
+            <h3 style="color: rgb(255, 153, 0);" class="let_space">© 2025 karthik,per2,per3,per4,per5 | All Rights Reserved</h3>			
+    
+            <!-- <div class="icons"> -->
+                <a href="http://facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            </div>
+        </center>
+            <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html> 
+		<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+			<link rel="stylesheet" type="text/css" href="../static/index.css"> 		
+		</head>	
+	<body class="body-style">	
+		<div class="header">			
+        {% if fpath %}        
+            <img src="{{ fpath }}"> 
+        {% endif %}
+        <br>
+			<!-- <h1 style="color: rgb(255, 153, 0);" class="let_space">WELCOME To Medical label recognition and recommendation..</h1>			 -->
+			  <a href="/admin" class="glow">Admin Login</a>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			  
+			  <a href="/create" class="glow">Create User</a>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  <a href="/simage" class="glow">Select Image for classification</a>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  <a href="/analyze" class="glow">Extract Text</a>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  <a href="/predictions" class="glow">Predictions</a>
+		</div>				 
+	<center>
+		</br></br></br></br></br></br></br></br>
+		<marquee>
+		<h1 style="color: rgb(255, 153, 0);" class="let_space">WELCOME To Medical label recognition and recommendation....</h1>
+		</marquee>
+
+		</br></br>
+		<div>
+		<button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/admin' ; " class="button">Admin Login..</button>
+		<br><br><br>
+		<button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/create' ; " class="button">Create user..</button>
+		<br><br><br>
+		<button id="Enter" type="submit" class="slide-button" onclick="window.location.href = '/simage' ; " class="button">Select image for classification..</button>
+		<br><br><br>
+		<button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/analyze' ; " class="button">ExtractText</button>
+		<br><br><br>
+		<button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/predictions' ; " class="button">predictions</button>		<br><br><br><br><br><br><br><br><br>
+		</div>
+		<div class="footer">	
+		<h3 style="color: rgb(255, 153, 0);" class="let_space">Medical label recognition and recommendation</h3>
+
+		<h3 style="color: rgb(255, 153, 0);" class="let_space">© 2025 karthik,per2,per3,per4,per5 | All Rights Reserved</h3>			
+
+		<!-- <div class="icons"> -->
+			<a href="http://facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-google"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+		</div>
+	</center>
+		<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+	</body>
+</html>

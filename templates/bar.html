@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/index.css"> 
+    <title>MLRR</title>
+</head>
+<body class="body-style">
+  <div class="header">		 
+    <img src="/mongo/logo.jpg">
+     <br>
+       
+          <a href="/admin" class="glow">Admin Login</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			  
+          <a href="/create" class="glow">Create User</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          
+    </div>	
+    <center>
+    <marquee>
+      <h1 style="color:  rgb(255, 153, 0);" class="let_space">Medical label recognition and recommendations....</h1>
+  </marquee>
+
+    <h1>MLRR</h1>
+    <div>
+      <script lang="java/script">
+        <!-- {{ chart|safe }} -->
+        {% if chart %}
+        var graphs = {{ chart|safe }};      
+        {% endif %}
+      </script>
+    </div>
+
+    <div>
+      <button id="Enter" type="button" class="file_submit" onclick="window.location.href = '/' ; " class="button">GO TO HOME..</button>
+  </div>
+  <br>
+  
+  <br>
+  <div class="footer">	
+   
+      <h3 style="color: rgb(255, 153, 0);" class="let_space">Medical label recognition and recommendation</h3>
+
+      <h3 style="color: rgb(255, 153, 0);" class="let_space">© 2025 karthik,per2,per3,per4,per5 | All Rights Reserved</h3>			
+
+      <!-- <div class="icons"> -->
+          <a href="http://facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+      </div>
+  <br>
+ </center>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

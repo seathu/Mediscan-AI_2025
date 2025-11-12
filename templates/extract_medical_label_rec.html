@@ -1,0 +1,113 @@
+<html> 
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+    <link rel="stylesheet" type="text/css" href="../static/index.css"> 
+    </head>	
+    <body class="body-style">
+        <div class="header">			
+            <!-- {% if fpath %}        
+                <img src="{{ fpath }}"> 
+            {% endif %} -->
+            <img src="/mongo/logo.jpg">
+             <br>
+                <!-- <h1 style="color: rgb(255, 153, 0);" class="let_space">WELCOME To Medical label recognition and recommendation..</h1>			 -->
+                  <a href="/admin" class="glow">Admin Login</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			  
+                  <a href="/create" class="glow">Create User</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <!-- <a href="/simage" class="glow">Select Image for classification</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="/analyze" class="glow">Extract Text</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="/predictions" class="glow">Predictions</a> -->
+            </div>	
+    <center>
+        <marquee>
+    <h1 style="color:  rgb(255, 153, 0);" class="let_space">Medical label recognition and recommendations....</h1>
+</marquee>
+    <br>
+    <br>
+    <br>       
+            {% if text %}
+                        <!-- <h1>  {{ sel_file_path1 }}    </h1>   -->
+                        <!-- <table>
+                        {% for item in crop_text1 %}
+                        <tr>
+                        <td><h3>{{item}}</h3></td>
+                        </tr>
+                        {% endfor %} 
+                        </table> -->
+                        
+                        <h3>  {{ elapsed_time }} </h3>
+                        <img src="{{ sel_file_path1 }}" style="width: 400px;">    
+                        <br><br>
+                        <!-- <table>
+                            {% for item in splitter_img_paths %}
+                            <tr>
+                            <td><h3>{{item}}</h3></td>
+                            </tr>
+                            {% endfor %} 
+                            </table> -->
+                        <br><br>
+                        
+                        <table>
+                            {% for path in splitter_img_paths %}
+                            <tr>
+                            <td><img src="{{ path }}" style="width: 400px;">   </td>
+                            </tr>
+                            {% endfor %}    
+                        </table>
+                        <table>
+                            
+                            {% for item in drugs_extracted %}
+                            <tr>
+                            <td><h3>{{item}}</h3></td>
+                            </tr>
+                            {% endfor %} 
+                            </table>
+                        <br> <br>
+                        <!-- <img src="{{ sel_file_path1 }}" style="width: 400px;">    
+                        <br><br>          -->
+                        <!-- <h1>{{ text }}</h1> -->
+                               
+            {% endif %}
+      
+   <div>
+    <button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/frecommendations' ; " class="button">Final Recomeendations..</button>
+        <button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/' ; " class="button">GO TO HOME..</button>
+    </div>
+    <br>
+    
+    <br>
+    <div class="footer">	
+        <h3 style="color: rgb(255, 153, 0);" class="let_space">Medical label recognition and recommendation</h3>
+
+        <h3 style="color: rgb(255, 153, 0);" class="let_space">© 2025 karthik,per2,per3,per4,per5 | All Rights Reserved</h3>			
+
+        <!-- <div class="icons"> -->
+            <a href="http://facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+        </div>
+    <br>
+    </center>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </body>
+    
+      <div>
+      
+            <script lang="java/script">
+              <!-- {{ chart|safe }} -->
+              {% if chart %}
+              var graphs = {{ chart|safe }};      
+              {% endif %}
+            </script>
+         
+        </div>
+    
+    </html>
+
+
+

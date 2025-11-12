@@ -1,0 +1,41 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+	</head>	
+	<body class="body-style">
+    <marquee>
+      <h1 style="color: rgb(255, 153, 0);" class="let_space">WELCOME To Medical label recognition and recommendation....</h1>
+      </marquee>
+    </br></br>
+        <form class="grid" action="/alogin" method="POST">
+          <h1 style="color: rgb(255, 153, 0);" class="let_space">Admin Login</h1>
+          {% if uname %}
+            <center>
+              <!-- <h1 style="color: rgb(255, 153, 0);" class="let_space">Admin Login.</h1> -->
+              <h3 style="color: blue;" class="let_space">Login success....</h3>
+              
+              <!-- <h3 style="color: blue;" class="let_space">path: {{name1}}, is here!!</h3>  -->
+            </center> 
+          {% endif %}        
+          <label for="uname">Enter user name :</label>
+          <input type="text" id="uname" name="uname">
+          <label for="pword">Enter candidate last name :</label>
+          <input type="password" id="pword" name="pword">   
+          
+          <center><input class="slide-button" type="Submit"></center>
+        </form>
+        <br>
+        <br>
+        <br>
+        <center>
+        <button id="Enter" type="button" class="slide-button" onclick="window.location.href = '/' ; " class="button">GO TO HOME..</button>
+        </center>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
+
+
+
